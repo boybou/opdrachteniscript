@@ -4,7 +4,7 @@
 nList = []
 t = int(input("hoeveel getallen wilt u testen?: "))
 for x in range(t):
-    invoer = int(input("getal %i: " % (x + 1)))
+    nList.append(int(input("getal %i: " % (x + 1))))
 for x in nList:
     iGetal = 0
     checkGetalGevonden = False

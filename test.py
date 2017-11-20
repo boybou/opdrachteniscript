@@ -7,3 +7,4 @@ print(2^64)
 
 if 1 != 1:
     print("wack")
+print(-2)
