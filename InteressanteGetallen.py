@@ -1,6 +1,6 @@
 # Interessante getallen
 # Boy Bouwense S1102301
-# HEADS UP: als deze code getest wordt en er worden hoge getallen ingevult kan het een redelijk lange tijd duren
+# HEADS  UP: als deze code getest wordt en er worden hoge getallen ingevult kan het een redelijk lange tijd duren
 # voordat de uitkosmt berekend is
 
 # initeer een list zodat er getallen aan toegevoegd kunnen worden
