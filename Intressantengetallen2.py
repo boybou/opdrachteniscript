@@ -1,28 +1,20 @@
-import datetime
-import time
-def tel_losse_numers_naar_getal(getal):
-    totaal = 0
-    getal_string = str(getal)
+# Interessante getallen
+# Boy Bouwense S1102301
 
-    for x in range (len(getal_string)):
-        totaal += int(getal_string[x])
-    return int(totaal)
-
-aantal_testgetallen = int(input())
-testgetallen = []
-
-for x in range (0, aantal_testgetallen):
-    testgetallen.append(int(input()))
-print(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
-teller = 0
-getal = 0
-gevonden = False
-for teller in range(0, len(testgetallen)):
-    while not gevonden:
-        if getal % testgetallen[teller] == 0:
-            if testgetallen[teller] == tel_losse_numers_naar_getal(getal):
-                print ("gevonden %i" % getal)
-                gevonden = True
-
-        getal += 1
-print(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
+nList = []
+t = int(input("hoeveel getallen wilt u testen?: "))
+for x in range(t):
+    nList.append(int(input("getal %i: " % (x + 1))))
+for x in nList:
+    iGetal = 0
+    checkGetalGevonden = False
+    while not checkGetalGevonden:
+        if iGetal % x == 0:
+            iGetalSum = 0
+            striGetal = str(iGetal)
+            for y in range(len(striGetal)):
+                iGetalSum += int(striGetal[y])
+            if iGetalSum == x:
+                print("uitkomst van getal %i is: %i"%(x,iGetal))
+                checkGetalGevonden = True
+        iGetal += 1

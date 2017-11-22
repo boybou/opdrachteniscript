@@ -8,3 +8,6 @@ print(2^64)
 if 1 != 1:
     print("wack")
 print(-2)
+
+print(1.6//1)
+print(1,"we",1)
