@@ -3,7 +3,7 @@
 
 
 # een function die de sterkte van een wachtwoord bepaalt
-def bepaalwachtwoordSterkte(wachtwoord):
+def bepaal_wachtwoord_sterkte(wachtwoord):
     # een dictionary waar alle sterkheids factoren in staan
     sterk = { "lengte" : False, "hoofdletter" : False, "kleineletter" : False, "cijfer" : False, "speciaalkarakter" : False}
     # een if statement die de lengte van het wachtwoord beoordeeldt
@@ -50,7 +50,7 @@ def main():
     counter = 1
     # for loop die alle wachtwoorden doorloopt en hun sterkte checkt en de uitvoer print
     for x in ww_list:
-        print("wachtwoord %i is een %s wachtwoord" %(counter, bepaalwachtwoordSterkte(x)))
+        print("wachtwoord %i is een %s wachtwoord" % (counter, bepaal_wachtwoord_sterkte(x)))
         counter += 1
 
 
