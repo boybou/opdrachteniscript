@@ -1,6 +1,7 @@
 # SterkeWachtwoorden
 # Boy Bouwense S1102301
 
+
 # een function die de sterkte van een wachtwoord bepaalt
 def bepaalwachtwoordSterkte(wachtwoord):
     # een dictionary waar alle sterkheids factoren in staan
@@ -22,15 +23,15 @@ def bepaalwachtwoordSterkte(wachtwoord):
         # if statement die checkt of het een speciaal teken is
         if not(x.isdigit() or x.isalpha()):
             sterk["speciaalkarakter"] = True
-    sterkCounter = 0
+    sterk_counter = 0
     # een for loop die alle sterkheids factoren die true zijn optelt
     for x in sterk:
         if sterk[x]:
-            sterkCounter +=1
+            sterk_counter +=1
     # een if statement die voor het aantal sterken factoren de sterkte bepaalt
-    if sterkCounter == 5:
+    if sterk_counter == 5:
         return "sterk"
-    elif sterkCounter == 3 or sterkCounter == 4:
+    elif sterk_counter == 3 or sterk_counter == 4:
         return "matig"
     else:
         return "zwak"
@@ -38,17 +39,17 @@ def bepaalwachtwoordSterkte(wachtwoord):
 # de main function
 def main():
     # een lege list waar wachtwoorden aan toegevoegd kunnen worden
-    wwList = []
+    ww_list = []
     # vraag hoeveel wachtwoorden er getest moeten worden
     t = int(input("aantal wachtwoorden dat gestest moet worden: "))
     # een for loop die voor hoeveel wachtwoorden er getest moeten worden wachtwoorden als invoer vraagt
     for x in range(t):
-        wwList.append(input("wachtwoord %i: " % (x+1)))
+        ww_list.append(input("wachtwoord %i: " % (x+1)))
     # print de uitvoer
     print()
     counter = 1
     # for loop die alle wachtwoorden doorloopt en hun sterkte checkt en de uitvoer print
-    for x in wwList:
+    for x in ww_list:
         print("wachtwoord %i is een %s wachtwoord" %(counter, bepaalwachtwoordSterkte(x)))
         counter += 1
 

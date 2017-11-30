@@ -1,6 +1,7 @@
 # Ceasarrotatie
 # Boy Bouwense S1102301
 
+
 # een function die een zin met een bepaalde ceasarrotatie ontcijfert
 def ontsleutel(rotatie, zin):
     # declare een dicitonary om waardes te geven aan elk letter in het alfabet
@@ -8,40 +9,40 @@ def ontsleutel(rotatie, zin):
                "m": 13, "n": 14, "o": 15, "p": 16, "q": 17, "r": 18, "s": 19, "t": 20, "u": 21, "v": 22, "w": 23,
                "x": 24,
                "y": 25, "z": 26}
-    ontsleuteldeZin = ""
+    ontsleutelde_zin = ""
     # een for loop die door alle tekens van een zin heen loopt
     for x in zin:
         # een if statement die checkt of het teken een teken is uit het alfabet
         if x.lower() in alfabet:
             # een stukje code die de ceasarrotatie terugdraait
             verkleinderotatie = rotatie % alfabet["z"]
-            ontsleuteldeLetterWaarde = alfabet[x.lower()] - verkleinderotatie
-            while ontsleuteldeLetterWaarde < alfabet["a"]:
-                ontsleuteldeLetterWaarde += alfabet["z"]
-            ontsleuteldeLetter = ""
+            ontsleutelde_letter_waarde = alfabet[x.lower()] - verkleinderotatie
+            while ontsleutelde_letter_waarde < alfabet["a"]:
+                ontsleutelde_letter_waarde += alfabet["z"]
+            ontsleutelde_letter = ""
             # een for loop die voor een bepaalde letterwaarde het bijbehorende letter in het alfabet zoekt
             for z in alfabet:
-                if alfabet[z] == ontsleuteldeLetterWaarde:
-                    ontsleuteldeLetter = z
+                if alfabet[z] == ontsleutelde_letter_waarde:
+                    ontsleutelde_letter = z
             # een if statement die checkt of de oorspronkelijke letter een hoofdletter was en respectievelijk de letter
             # in hoofdletter of kleineletter vorm aan de onsleutelde zin toevoegt
             if x == x.lower():
-                ontsleuteldeZin += ontsleuteldeLetter
+                ontsleutelde_zin += ontsleutelde_letter
             else:
-                ontsleuteldeZin += ontsleuteldeLetter.upper()
+                ontsleutelde_zin += ontsleutelde_letter.upper()
         # zo niet hoeft er niks veranderd te worden en wordt het teken toegevoegd aan de onstleutelde zin
         else:
-            ontsleuteldeZin += x
+            ontsleutelde_zin += x
     # returned de onsleutelde zin
-    return ontsleuteldeZin
+    return ontsleutelde_zin
 
 # de main function
 def main():
     # invoer wordt gevraagd en gelijk door de ontsleutel functie gehaald
-    onsleuteldeZin = ontsleutel(int(input("met hoeveel Caesar rotaties is het bericht versleutelt: ")),
+    onsleutelde_zin = ontsleutel(int(input("met hoeveel Caesar rotaties is het bericht versleutelt: ")),
                      input("de versleutelde zin: "))
     # uitvoer wordt geprint
-    print("\nontsleutelde zin: %s" % onsleuteldeZin)
+    print("\nontsleutelde zin: %s" % onsleutelde_zin)
 
 
 if __name__ == "__main__":
