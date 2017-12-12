@@ -76,7 +76,7 @@ def stappen(fermonen_spoor_lijst):
 # de main function
 def main():
     # input wordt gevraagd en omgezet naar een rooster
-    n = int(input("hoe lang en hoe breed wordt u rooster: "))
+    n = int(input("hoe lang en hoe breed wordt u rooster(1 natuurlijk getal): "))
     inhoud = n ** 2
     fermonen_spoor_string = input("voer u rooster in, u rooster bestaat uit %i tekens(de tekens die u mag gebruiken zijn <,>,v of ^): "
                    % inhoud)
@@ -87,6 +87,7 @@ def main():
     for x in voledige_simulatie:
         print(tekst(vierkant), "\n")
         stap(vierkant, x)
+    print(voledige_simulatie)
 
 
 if __name__ == "__main__":
