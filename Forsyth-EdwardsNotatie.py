@@ -1,9 +1,10 @@
 # Forsyth-Edwards notatie
 # Boy Bouwense s1102301
 
-
+# een function die een van een FEN-string een grid rooster string maakt
 def fen2grid(FEN_string,lveld="*"):
     return_string = ""
+    # for loop die voor elk string element het juiste element aan de return string toegvoegt
     for x in FEN_string:
         if x == "/":
             return_string += "\n"
@@ -14,13 +15,13 @@ def fen2grid(FEN_string,lveld="*"):
             return_string += x
     return return_string
 
-
-def grid2fen(grid_string,lvel="*"):
+# een function die van een grid string een
+def grid2fen(grid_string, lveld="*"):
     return_string = ""
     temp_number = 0
     number_last = False
     for x in grid_string:
-        if x == lvel:
+        if x == lveld:
             temp_number += 1
             number_last = True
         elif x == "\n":
