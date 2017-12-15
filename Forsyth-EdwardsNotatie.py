@@ -20,6 +20,7 @@ def grid2fen(grid_string, lveld="*"):
     return_string = ""
     temp_number = 0
     number_last = False
+    # een for loop die voor elk string element de de juister vervanger toevoegd aan de return string
     for x in grid_string:
         if x == lveld:
             temp_number += 1
@@ -36,9 +37,11 @@ def grid2fen(grid_string, lveld="*"):
                 temp_number = 0
                 number_last = False
             return_string += x
+    # return de return string
     return return_string
 
 
+# de main function
 def main():
     print(fen2grid('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR'),"\n")
     print(fen2grid('rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR', '.'),"\n")
